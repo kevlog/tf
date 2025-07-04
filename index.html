@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Countdown Transfer</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FlipDown CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/flipdown@0.3.2/dist/flipdown.min.css">
+  <!-- Particles.js -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="relative flex items-center justify-center min-h-screen bg-gray-100">
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+  <!-- Main Content -->
+  <div class="text-center bg-white/40 backdrop-blur p-8 rounded-xl shadow-xl">
+    <h1 class="text-2xl font-semibold mb-4">Batas Transfer</h1>
+    <div id="flipdown" class="flipdown mx-auto"></div>
+    <button onclick="toggleModal()" class="mt-6 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+      Lihat Info Transfer
+    </button>
+  </div>
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 backdrop-blur rounded-lg w-full max-w-md text-center relative">
+      <button onclick="toggleModal()" class="absolute top-2 right-3 text-gray-500 hover:text-gray-700">&times;</button>
+      <h2 class="text-xl font-bold mb-4">Informasi Transfer</h2>
+      <p class="mb-1"><strong>Nama:</strong> Fahrijar Yusuf</p>
+      <p class="mb-1"><strong>Bank:</strong> BRI</p>
+      <p class="mb-4"><strong>No. Rek:</strong> <span id="rekening">722901023824533</span></p>
+      <button onclick="salinRekening()" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">
+        Salin Nomor Rekening
+      </button>
+      <p id="toast" class="mt-3 text-sm text-green-600 hidden">Nomor rekening disalin!</p>
+    </div>
+  </div>
+  <!-- Script Libraries -->
+  <script src="https://unpkg.com/flipdown@0.3.2/dist/flipdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Logic -->
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
